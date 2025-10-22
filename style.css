@@ -1,8 +1,7 @@
 :root{
-    --background: #f3d8d8;
-    --accents: #ac1717;
-    --text: #1b1a1d;
-    --accent2: #b18b8b;
-    --accent3: #353441;
-    --accent4: #ef1a1a;
+    --background: #ebf9ff;
+    --accent: #acd6f6;
+    --accent2: #52a5de;
+    --accent3: #18284a;
+    --baseText: #070810;
 }
