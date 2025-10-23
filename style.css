@@ -1,7 +1,11 @@
 :root{
     --background: #ebf9ff;
     --accent: #acd6f6;
-    --accent2: #52a5de;
-    --accent3: #18284a;
+    --box_color: #52a5de;
+    --headerColor: #18284a;
     --baseText: #070810;
+}
+@font-face {
+    font-family: IceAndSnow;
+    src: url(./IceAndsnowNormal-2ve8.ttf);
 }
