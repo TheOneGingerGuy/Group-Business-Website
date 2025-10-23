@@ -1,1 +1,90 @@
-@import url("./style.css")
+@import url("./style.css");
+*{ box-sizing: border-box; }
+body{
+    margin: 0;
+    font: 1.2rem;
+    color: var(--text);
+    background: var(--background)
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--accent3);
+    border-bottom: 3px solid var(--accent2);
+}
+.wrapper{
+    width: min(1100px, 92vw);
+    margin-inline: auto;
+    padding: 24px;
+}
+.bar{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+}
+.brand{
+    font-weight: 800;
+    letter-spacing: .2px;
+}
+.tag{
+    color: var(--accent2);
+    font-size: 1rem;
+}
+section{
+    background-color: var(--accent2);
+    border: 1px solid var(--baseText) 10%;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin: 18px 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+@media (min-width:480px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    body{
+        line-height: 1.6;
+    }
+}
+@media (min-width: 1024px){
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .wrapper{
+        padding: 32px;
+    }
+    .hero{
+        padding: 26px;
+    }
+}
+/* Orientation example */
+.orientation{
+    margin-top: 8px;
+    font: 0.9rem;
+}
+/* .only-portrait, .only-landscape{
+    display: none;
+} */
+@media (orientation: portrait){
+    .only-portrait{
+        display: inline;
+    }
+}
+@media (orientation: landscape){
+    .only-landscape{
+        display: inline;
+    }
+}
