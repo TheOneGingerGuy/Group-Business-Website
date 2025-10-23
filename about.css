@@ -4,19 +4,19 @@ body{
     margin: 0;
     font: 1.2rem;
     color: var(--text);
-    background: var(--background)
+    background: var(--background);
 }
 header{
     position: sticky;
     top: 0;
     z-index: 5;
-    background-color: var(--accent3);
-    border-bottom: 3px solid var(--accent2);
+    background-color: var(--headerColor);
+    border-bottom: 3px solid var(--box_color);
+    margin: -0.5rem;
 }
 .wrapper{
-    width: min(1100px, 92vw);
-    margin-inline: auto;
-    padding: 24px;
+    margin: 0;
+    padding: 25px;
 }
 .bar{
     display: flex;
@@ -30,16 +30,29 @@ header{
     letter-spacing: .2px;
 }
 .tag{
-    color: var(--accent2);
+    color: var(--box_color);
     font-size: 1rem;
 }
 section{
-    background-color: var(--accent2);
+    background-color: var(--box_color);
     border: 1px solid var(--baseText) 10%;
-    border-radius: 16px;
+    border-radius: 7px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     padding: 20px;
     margin: 18px 0;
+}
+.light-background{
+    background-color: var(--accent);
+}
+article img{
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--box_color);
+    border-radius: 10px;
+}
+article h2, article p{
+    text-align: center;
+    margin: 0;
 }
 .grid{
     display: grid;
@@ -66,18 +79,11 @@ section{
     .wrapper{
         padding: 32px;
     }
-    .hero{
-        padding: 26px;
-    }
 }
-/* Orientation example */
 .orientation{
     margin-top: 8px;
     font: 0.9rem;
 }
-/* .only-portrait, .only-landscape{
-    display: none;
-} */
 @media (orientation: portrait){
     .only-portrait{
         display: inline;
