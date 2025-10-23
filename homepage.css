@@ -1,4 +1,21 @@
 @import url(./style.css);
+
 @media (min-width:480px){
-    
+}
+body{
+
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.navbar{
+    border: 1px solid var(--accent);
+    background-color: var(--headerColor);
+}
+.header{
+    text-align: center;
 }
