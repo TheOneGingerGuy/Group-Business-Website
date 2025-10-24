@@ -1,0 +1,144 @@
+@import url(./style.css);
+body{
+    background-color: #ebf9ff;
+}
+ ::before,*::after{ 
+    box-sizing:border-box; 
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accent3);
+    color: white;
+    justify-content: center;
+}
+header .content{
+    margin: auto;
+
+}
+.brand{ 
+    display:flex;
+    align-items:center;
+    gap:.5rem; 
+    color:white; 
+    text-decoration:none; 
+    font-weight:700; 
+    }
+ .wrap{ 
+    max-width:960px; 
+    margin:0 auto; 
+    padding:.75rem 1rem; 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:1rem; 
+}
+nav{ 
+    position:sticky;
+     top:0; 
+    z-index:10; 
+    background:var(--bg); 
+    border-bottom:1px solid rgba(255,255,255,.08); 
+    align-items: center;
+}
+details{
+    position: relative;
+}
+summary{
+    list-style: none;
+    cursor: crosshair;
+    display: none;
+}
+.sr-only{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    white-space: nowrap;
+    border:0;
+    clip-path: rect(0,0,0,0);
+}
+    details{
+        position: relative;
+    }
+.hamburger, .hamburger::before, .hamburger::after{
+        display: block;
+        background-color: var(--background);
+        height: 3px;
+        width: 26px;
+        border-radius:2px;
+        position: relative;
+        transition: all 0.3 ease;
+    }
+      .hamburger, .hamburger::before, .hamburger::after{
+        display: block;
+        background-color: var(--background);
+        height: 3px;
+        width: 26px;
+        border-radius:2px;
+        position: relative;
+        transition: all 0.3 ease;
+    }
+    .hamburger::before, .hamburger::after{
+        content: '';
+        position: absolute;
+        left:0;
+    }
+    .hamburger::before{
+        top:-8px;
+    }
+    .hamburger::after{
+        top:8px;
+    }
+    summary::-webkit-details-marker{
+        display: none;
+    }
+    .menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1.5rem;
+    }
+    .link{
+        color: var(--background);
+        text-decoration: none;
+        font-weight: 800;
+    }
+    .link:hover{
+        color: var(--background);
+    }
+@media (max-width:700px){
+        summary{
+            display:block;
+        }
+        .menu{
+            flex-direction: column;
+            position: absolute;
+            top:100%;
+            background: var(--accent3);
+            border-top:1px solid rgba(255,255,255,.01);
+            width: 100px;
+            display: none;
+            padding: 0.5rem 0;
+        }
+        .menu .li{
+            margin-right: 1rem;
+        }
+        details[open] .menu{
+            display: flex;
+        }
+        details[open] .hamburger{
+            background: transparent;
+        }
+        details[open] .hamburger::before{
+            transform: rotate(45deg);
+            top:0;
+        }
+        details[open] .hamburger::after{
+            transform: rotate(-45deg);
+            top:0;
+        }
+    }
