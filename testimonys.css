@@ -14,7 +14,7 @@ header{
 }
 header .content{
     margin: auto;
-
+    text-align: end;
 }
 .brand{ 
     display:flex;
@@ -35,7 +35,7 @@ header .content{
 }
 nav{ 
     position:sticky;
-     top:0; 
+    top:0; 
     z-index:10; 
     background:var(--bg); 
     border-bottom:1px solid rgba(255,255,255,.08); 
@@ -43,6 +43,7 @@ nav{
 }
 details{
     position: relative;
+    top:10px;
 }
 summary{
     list-style: none;
@@ -62,6 +63,9 @@ summary{
 }
     details{
         position: relative;
+    }
+    .content{
+       display: flex;
     }
 .hamburger, .hamburger::before, .hamburger::after{
         display: block;
@@ -108,7 +112,7 @@ summary{
         font-weight: 800;
     }
     .link:hover{
-        color: var(--background);
+        color: var(--accent2);
     }
 @media (max-width:700px){
         summary{
