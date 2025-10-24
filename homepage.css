@@ -1,21 +1,32 @@
 @import url(./style.css);
 
 @media (min-width:480px){
-}
-body{
 
 }
-.logo{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    top: 0;
+body{
+    background-color: var(--background);
 }
 .navbar{
-    border: 1px solid var(--accent);
-    background-color: var(--headerColor);
+    border-bottom: 3px solid var(--box_color);
+    background: var(--headerColor);
+    margin-bottom: 15px;
 }
 .header{
     text-align: center;
+    color: white;
+}
+article img{
+    height: 230px;
+    width: 100%;
+    border: 5px solid var(--box_color);
+    border-radius: 10px;
+}
+.light_background{
+    display: flex;
+    border: 5px solid var(--accent);
+    background-color: var(--accent);
+    border-radius: 10px;
+    padding: 15px;
+    justify-content: center;
+    
 }
