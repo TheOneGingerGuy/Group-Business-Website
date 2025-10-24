@@ -8,13 +8,13 @@ body{
 header{
     display: flex;
     flex-direction: row;
-    background-color: var(--accent3);
+    background-color: var(--headerColor);
     color: white;
-    justify-content: center;
+    justify-content: space-between;
 }
 header .content{
-    margin: auto;
     text-align: end;
+    font-family: IceAndSnow, sans-serif;
 }
 .brand{ 
     display:flex;
@@ -35,15 +35,14 @@ header .content{
 }
 nav{ 
     position:sticky;
-    top:0; 
+    top:10px; 
     z-index:10; 
-    background:var(--background); 
     border-bottom:1px solid rgba(255,255,255,.08); 
     align-items: center;
 }
 details{
     position: relative;
-    top:10px;
+    top:17px;
 }
 summary{
     list-style: none;
@@ -61,59 +60,65 @@ summary{
     border:0;
     clip-path: rect(0,0,0,0);
 }
-    details{
-        position: relative;
+ .content{
+    position: relative;
+    display: flex;
+    align-items: center;
+        
     }
-    .content{
-       display: flex;
+ .img{
+    margin-left: 10px;
+    border-radius: 100px;
     }
 .hamburger, .hamburger::before, .hamburger::after{
-        display: block;
-        background-color: var(--background);
-        height: 3px;
-        width: 26px;
-        border-radius:2px;
-        position: relative;
-        transition: all 0.3 ease;
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 26px;
+    border-radius:2px;
+    position: relative;
+    transition: all 0.3 ease;
     }
-      .hamburger, .hamburger::before, .hamburger::after{
-        display: block;
-        background-color: var(--background);
-        height: 3px;
-        width: 26px;
-        border-radius:2px;
-        position: relative;
-        transition: all 0.3 ease;
+.hamburger, .hamburger::before, .hamburger::after{
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 26px;
+    border-radius:2px;
+    position: relative;
+    transition: all 0.3 ease;
     }
-    .hamburger::before, .hamburger::after{
-        content: '';
-        position: absolute;
-        left:0;
-    }
-    .hamburger::before{
-        top:-8px;
-    }
-    .hamburger::after{
-        top:8px;
-    }
-    summary::-webkit-details-marker{
-        display: none;
-    }
-    .menu{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1.5rem;
-    }
-    .link{
-        color: var(--background);
-        text-decoration: none;
-        font-weight: 800;
-    }
-    .link:hover{
-        color: var(--accent2);
-    }
+.hamburger::before, .hamburger::after{
+    content: '';
+    position: absolute;
+    left:0;
+}
+.hamburger::before{
+    top:-8px;
+}
+.hamburger::after{
+    top:8px;
+}
+summary::-webkit-details-marker{
+    display: none;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 17px;
+}
+.link{
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 800;
+}
+.link:hover{
+    color: var(--accent2);
+}
 @media (max-width:700px){
         summary{
             display:block;
@@ -122,7 +127,7 @@ summary{
             flex-direction: column;
             position: absolute;
             top:100%;
-            background: var(--accent3);
+            background: var(--headerColor);
             border-top:1px solid rgba(255,255,255,.01);
             width: 100px;
             display: none;
