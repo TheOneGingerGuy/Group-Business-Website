@@ -37,7 +37,7 @@ nav{
     position:sticky;
     top:0; 
     z-index:10; 
-    background:var(--bg); 
+    background:var(--background); 
     border-bottom:1px solid rgba(255,255,255,.08); 
     align-items: center;
 }
