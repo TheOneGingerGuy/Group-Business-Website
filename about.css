@@ -110,6 +110,15 @@ article h2, article p{
         display: inline;
     }
 }
+@media (min-width: 480px) and (orientation: landscape){
+    .only-landscape{
+        display: grid;
+    }
+    body{
+        line-height: 1.6;
+    }
+    
+}
 @media (min-width: 300px) and (orientation: landscape){
     .only-landscape{
         display: inline;
@@ -124,24 +133,6 @@ article h2, article p{
     }
     article p{
         margin: 1rem;
-    }
-}
-@media (min-width: 700px) and (orientation: landscape){
-    .only-landscape{
-        display: inline;
-    }
-    .top-box{
-        display: flex;
-        flex-direction: row;
-        font-size: 200px;
-    }
-    .middle-box{
-        display: flex;
-        flex-direction: row;
-    }
-    .bottom-box{
-        display: flex;
-        flex-direction: row;
     }
 }
 @media (min-width: 480px){
