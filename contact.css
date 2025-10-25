@@ -14,7 +14,7 @@ header{
     z-index: 5;
     background-color: var(--headerColor);
     border-bottom: 3px solid var(--box_color);
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
 }
 .wrapper{
     margin: 0;
@@ -35,7 +35,7 @@ section{
     margin: 18px 0;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
-.light-background{
+.Image_Background{
     background-color: var(--accent);
 }
 .footer-grid{
@@ -83,11 +83,9 @@ footer a:link, footer a:visited{
 .text1{
     grid-area: copyright;
 }
-article img{
+article iframe{
     width: 100%;
-    height: auto;
-    border: 5px solid var(--box_color);
-    border-radius: 10px;
+    height: 400px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 article h2{
