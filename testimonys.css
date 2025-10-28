@@ -151,3 +151,79 @@ summary::-webkit-details-marker{
             top:0;
         }
     }
+/* This is the end of the css for header. */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--accent);
+}
+.light-background{
+    background-color: var(--box_color);
+    padding: 7px;
+    margin: 18px 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    border-radius: 7px;
+}
+article img{
+    display: flex;
+}
+testimonials{
+    display: flex;
+    text-align: center;
+}
+testimonials h2{
+    font-family: IceAndSnow, sans-serif;
+}
+.footer-grid{
+    background-color: var(--headerColor);
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 10px;
+    gap: 20px;
+    grid-template-areas:
+    "instagram facebook twitter youtube"
+    "email email phone phone"
+    "policy policy partnerships partnerships"
+    "copyright copyright copyright copyright";
+    margin-bottom: -1rem;
+}
+footer a:link, footer a:visited{
+    color: white;
+    text-decoration: none;
+}
+.link1{
+    grid-area: instagram;
+}
+.link2{
+    grid-area: facebook;
+}
+.link3{
+    grid-area: twitter;
+}
+.link4{
+    grid-area: youtube;
+}
+.link5{
+    grid-area: email;
+}
+.link6{
+    grid-area: phone;
+}
+.link7{
+    grid-area: policy;
+}
+.link8{
+    grid-area: partnerships;
+}
+.text1{
+    grid-area: copyright;
+}
+@media (min-width:800px){
+    body{
+        font-size: 20px;
+    }
+    
+}
