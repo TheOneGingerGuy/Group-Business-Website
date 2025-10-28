@@ -221,9 +221,25 @@ footer a:link, footer a:visited{
 .text1{
     grid-area: copyright;
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
 @media (min-width:800px){
     body{
         font-size: 20px;
     }
     
+}
+@media (min-width:481px) and (max-width:768px) and (orientation:landscape){
+    .wrapper{
+        flex-direction: row;
+    }
+    testimonials{
+        width: 50%;
+    }
+    main{
+        margin: 15px;
+        border-radius: 7px;
+    }
 }
