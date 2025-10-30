@@ -1,0 +1,170 @@
+@import url(./style.css);
+body{
+    background-color: #ebf9ff;
+}
+ ::before,*::after{ 
+    box-sizing:border-box; 
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--headerColor);
+    color: white;
+    justify-content: space-between;
+}
+header .content{
+    text-align: end;
+    font-family: IceAndSnow, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.brand{ 
+    display:flex;
+    align-items:center;
+    gap:.5rem; 
+    color:white; 
+    text-decoration:none; 
+    font-weight:700; 
+    }
+ .wrap{ 
+    max-width:960px; 
+    margin:0 auto; 
+    padding:.75rem 1rem; 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:1rem; 
+}
+nav{ 
+    position:sticky;
+    top:10px; 
+    z-index:10; 
+    border-bottom:1px solid rgba(255,255,255,.08); 
+    align-items: center;
+}
+details{
+    position: relative;
+    top:17px;
+}
+summary{
+    list-style: none;
+    cursor: crosshair;
+    display: none;
+}
+.sr-only{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    white-space: nowrap;
+    border:0;
+    clip-path: rect(0,0,0,0);
+}
+ .content{
+    position: relative;
+    display: flex;
+    align-items: center;
+        
+    }
+ .img{
+    margin-left: 10px;
+    border-radius: 100px;
+    }
+.hamburger, .hamburger::before, .hamburger::after{
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 26px;
+    border-radius:2px;
+    position: relative;
+    transition: all 0.3 ease;
+    }
+.hamburger, .hamburger::before, .hamburger::after{
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 26px;
+    border-radius:2px;
+    position: relative;
+    transition: all 0.3 ease;
+    }
+.hamburger::before, .hamburger::after{
+    content: '';
+    position: absolute;
+    left:0;
+}
+.hamburger::before{
+    top:-8px;
+}
+.hamburger::after{
+    top:8px;
+}
+summary::-webkit-details-marker{
+    display: none;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 17px;
+}
+.link{
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 800;
+}
+.link:hover{
+    color: var(--accent2);
+}
+@media (max-width:700px){
+        summary{
+            display:block;
+        }
+        .menu{
+            flex-direction: column;
+            position: absolute;
+            top:100%;
+            background: var(--headerColor);
+            border-top:1px solid rgba(255,255,255,.01);
+            width: 100px;
+            display: none;
+            padding: 0.5rem 0;
+        }
+        .menu .li{
+            margin-right: 1rem;
+        }
+        details[open] .menu{
+            display: flex;
+        }
+        details[open] .hamburger{
+            background: transparent;
+        }
+        details[open] .hamburger::before{
+            transform: rotate(45deg);
+            top:0;
+        }
+        details[open] .hamburger::after{
+            transform: rotate(-45deg);
+            top:0;
+        }
+    }
+    section{
+        background-color: var(--box_color);
+        border-radius: 7px;
+        border: 1px solid var(--baseText) 10%;
+        padding: 25px;
+        margin: 18px 0;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .middleBox{
+        background-color: var(--accent);
+        display: flex;
+        justify-content: center;
+    }
