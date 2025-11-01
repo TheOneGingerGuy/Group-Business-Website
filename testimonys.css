@@ -11,10 +11,10 @@ header{
     background-color: var(--headerColor);
     color: white;
     justify-content: space-between;
+    font-family: IceAndSnow;
 }
 header .content{
     text-align: end;
-    font-family: IceAndSnow, sans-serif;
 }
 .brand{ 
     display:flex;
@@ -174,7 +174,10 @@ testimonials{
     text-align: center;
 }
 testimonials h2{
-    font-family: IceAndSnow, sans-serif;
+    font-family: IceAndSnow;
+}
+h3{
+    font-family: IceAndSnow;
 }
 .footer-grid{
     background-color: var(--headerColor);
